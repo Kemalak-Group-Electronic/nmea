@@ -1,0 +1,36 @@
+---
+:source:
+  :file: test/test_utils.c
+  :dirname: test
+  :basename: test_utils.c
+:successes:
+- :test: test_utils_splitStrByComma
+  :line: 12
+  :message: ''
+  :unity_test_time: 0
+- :test: test_utils_isCharExist
+  :line: 38
+  :message: ''
+  :unity_test_time: 0
+- :test: test_utils_crop_string
+  :line: 51
+  :message: ''
+  :unity_test_time: 0
+- :test: test_utils_brg_charToPosition
+  :line: 62
+  :message: ''
+  :unity_test_time: 0
+- :test: test_utils_nmea_chksum_getFromStr_calculate
+  :line: 77
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 5
+  :passed: 5
+  :failed: 0
+  :ignored: 0
+:stdout:
+- 'Scanning String : $GPGGA,123456.00,4807.038,N,01131.000,E,1,12,0.8,545.4,M,46.9,M,,*69'
+:time: 0.0011242460000175925

@@ -1,0 +1,4 @@
+/home/ee-workshop/nmea/build/CMakeFiles/NMEA0183Lib.dir
+/home/ee-workshop/nmea/build/CMakeFiles/nmea.dir
+/home/ee-workshop/nmea/build/CMakeFiles/edit_cache.dir
+/home/ee-workshop/nmea/build/CMakeFiles/rebuild_cache.dir

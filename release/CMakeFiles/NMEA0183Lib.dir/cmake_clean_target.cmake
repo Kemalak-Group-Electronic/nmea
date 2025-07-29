@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libNMEA0183Lib.a"
+)

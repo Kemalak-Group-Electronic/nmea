@@ -1,0 +1,1 @@
+/usr/bin/cc -g -g3 -O0 CMakeFiles/nmea.dir/example/basic.c.o -o nmea  libNMEA0183Lib.a 
