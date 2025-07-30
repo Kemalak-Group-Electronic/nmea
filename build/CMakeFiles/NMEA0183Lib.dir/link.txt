@@ -1,2 +1,0 @@
-/usr/bin/ar qc libNMEA0183Lib.a CMakeFiles/NMEA0183Lib.dir/src/nmea0183.c.o CMakeFiles/NMEA0183Lib.dir/src/nmeaParserStatic.c.o CMakeFiles/NMEA0183Lib.dir/src/utils.c.o
-/usr/bin/ranlib libNMEA0183Lib.a
