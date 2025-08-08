@@ -47,7 +47,7 @@ test_utils_isCharExist ()
           "69\r\n";
 
     printf("Scanning String : ");
-    for (int i = 0; i < strlen(string); i++)
+    for (size_t i = 0; i < strlen(string); i++)
     {
         bool charExist = utils_isCharExist(string, string[i]);
         printf("%c", string[i]);
