@@ -66,7 +66,6 @@ typedef struct {
 } nmea_sentence_s;
 
 
-typedef char nmea_cardinal_t;
 #define NMEA_CARDINAL_DIR_NORTH		(nmea_cardinal_t) 'N'
 #define NMEA_CARDINAL_DIR_EAST		(nmea_cardinal_t) 'E'
 #define NMEA_CARDINAL_DIR_SOUTH		(nmea_cardinal_t) 'S'
