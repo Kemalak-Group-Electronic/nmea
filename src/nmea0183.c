@@ -15,11 +15,10 @@ nmea0183_init (nmea_gpgga_s *pgpgga, nmea_gprmc_s *pgprmc)
 int
 nmea0183_parse (char *sentence, size_t length, bool chksum_enable)
 {
-    unsigned int n_vals, val_index;
-    char        *value, *val_string;
+    unsigned int n_vals;
+    char        *val_string;
     char        *values[255];
 
-    nmea_parser_module_s *parser;
     nmea_sentence_t       type;
 
     err_code_t err = nmea_validate(sentence, length, chksum_enable);
@@ -52,12 +51,6 @@ nmea0183_parse (char *sentence, size_t length, bool chksum_enable)
     return NMEA_OK;
 }
 
-err_code_t
-nmea0183_check_gpgga (nmea_gpgga_s *p_gpgga)
-{
-    nmea_check_gpgga(p_gpgga);
-}
-
 parser_status_t
 nmea0183_gpggaIsUpdated (void)
 {
@@ -67,13 +60,7 @@ nmea0183_gpggaIsUpdated (void)
 err_code_t
 nmea0183_get_gpgga (nmea_gpgga_s *p_gpgga)
 {
-    nmea_get_gpgga(p_gpgga);
-}
-
-err_code_t
-nmea0183_check_gprmc (nmea_gprmc_s *p_gprmc)
-{
-    nmea_check_gprmc(p_gprmc);
+    return nmea_get_gpgga(p_gpgga);
 }
 
 parser_status_t
@@ -85,5 +72,5 @@ nmea0183_gprmcIsUpdated (void)
 err_code_t
 nmea0183_get_gprmc (nmea_gprmc_s *p_gprmc)
 {
-    nmea_get_gprmc(p_gprmc);
+    return nmea_get_gprmc(p_gprmc);
 }

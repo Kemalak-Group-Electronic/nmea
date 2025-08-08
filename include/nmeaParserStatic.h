@@ -15,13 +15,15 @@ err_code_t nmea_validate(const char *string, size_t length, bool chksum_enable);
 void nmea_allocater(char **values, nmea_sentence_t type);
 
 err_code_t nmea_check_gpgga(nmea_gpgga_s *pgpgga);
-void nmea_get_gpgga(nmea_gpgga_s *pgpgga);
+parser_status_t nmea_gpggaIsUpdated(void);
+err_code_t nmea_get_gpgga(nmea_gpgga_s *pgpgga);
 void nmea_gpgga_allocater(char **values);
 void nmea_gpgga_allocater_time(char **values);
 void nmea_gpgga_allocater_position(char **values);
 
 err_code_t nmea_check_gprmc(nmea_gprmc_s *pgprmc);
-void nmea_get_gprmc(nmea_gprmc_s *pgprmc);
+parser_status_t nmea_gprmcIsUpdated(void);
+err_code_t nmea_get_gprmc(nmea_gprmc_s *pgprmc);
 void nmea_gprmc_allocater(char **values);
 void nmea_gprmc_allocater_time_date(char **values);
 void nmea_gprmc_allocater_position(char **values);

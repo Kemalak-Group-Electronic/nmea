@@ -244,31 +244,35 @@ nmea_gpggaIsUpdated (void)
     }
 }
 
-void
+err_code_t
 nmea_get_gpgga (nmea_gpgga_s *pgpgga)
 {
+    err_code_t err = NMEA_OK;
     if (pgpgga == NULL)
     {
-        return;
+        err = NMEA_ERR_GPGGA_INVALID;
+        return err;
     }
 
-    if (NMEA_OK != nmea_check_gpgga(pgpgga))
+    err = nmea_check_gpgga(pgpgga);
+
+    if (NMEA_OK != err)
     {
-        return; // Handle error appropriately
+        return err; // Handle error appropriately
     }
 
     // Copy the data from the static gpgga to the provided pointer
     *pgpgga         = gpgga;
-    gpgga.isUpdated = false; // Reset the updated flag after getting the data
+    
+    // Reset the updated flag after getting the data
+    gpgga.isUpdated = false; 
 
-    return;
+    return err;
 }
 
 void
 nmea_gpgga_allocater (char **values)
 {
-    nmea_sentence_t type = nmea_get_type(values[GPGGA_SENTENCE]);
-
     nmea_gpgga_allocater_time(values);
     nmea_gpgga_allocater_position(values);
 
@@ -367,17 +371,21 @@ nmea_gprmcIsUpdated (void)
     }
 }
 
-void
+err_code_t
 nmea_get_gprmc (nmea_gprmc_s *pgprmc)
 {
+    err_code_t err = NMEA_OK;
     if (pgprmc == NULL)
     {
-        return;
+        err = NMEA_ERR_GPRMC_INVALID;
+        return err;
     }
 
-    if (NMEA_OK != nmea_check_gprmc(pgprmc))
+    err = nmea_check_gprmc(pgprmc);
+
+    if (NMEA_OK != err)
     {
-        return; // Handle error appropriately
+        return err; // Handle error appropriately
     }
 
     // Copy the data from the static gprmc to the provided pointer
@@ -386,7 +394,7 @@ nmea_get_gprmc (nmea_gprmc_s *pgprmc)
     // Reset the updated flag after getting the data
     gprmc.isUpdated = false;
 
-    return;
+    return err;
 }
 
 void
