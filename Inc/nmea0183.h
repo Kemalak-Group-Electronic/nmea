@@ -11,7 +11,7 @@
 // Parser TYpe End //
 
 void nmea0183_init(nmea_gpgga_s *pgpgga, nmea_gprmc_s *pgprmc);
-int nmea0183_parse(char *sentence, size_t length, bool chksum_enable);
+err_code_t nmea0183_parse(char *sentence, size_t length, bool chksum_enable);
 
 parser_status_t nmea0183_gpggaIsUpdated(void);
 err_code_t nmea0183_get_gpgga(nmea_gpgga_s *parser);

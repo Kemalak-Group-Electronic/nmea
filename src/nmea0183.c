@@ -12,7 +12,7 @@ nmea0183_init (nmea_gpgga_s *pgpgga, nmea_gprmc_s *pgprmc)
     nmea_init(pgpgga, pgprmc);
 }
 
-int
+err_code_t
 nmea0183_parse (char *sentence, size_t length, bool chksum_enable)
 {
     unsigned int n_vals;
