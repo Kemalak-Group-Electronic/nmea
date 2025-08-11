@@ -104,7 +104,7 @@
     - ../src/nmeaParserStatic.c
     - ../src/utils.c
   :include:
-    - ../include/** # In simple projects, this entry often duplicates :source
+    - ../Inc/** # In simple projects, this entry often duplicates :source
   :support:
     - test/support
   :libraries: []
