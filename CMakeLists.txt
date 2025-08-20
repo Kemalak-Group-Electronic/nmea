@@ -17,7 +17,7 @@ if(USE_PREBUILT_LIB)
     target_include_directories(nmea PUBLIC include)
 else()
     # Set the library directories
-    include_directories(include)
+    include_directories(Inc)
 
     # Create the static library
     add_library(NMEA0183Lib STATIC 

@@ -107,13 +107,12 @@ main (void)
 
     {
         printf("GPGGA data is updated.\n");
-        if (nmea0183_check_gpgga(&mygpgga) != NMEA_OK)
+        if (nmea0183_get_gpgga(&mygpgga) != NMEA_OK)
         {
             printf("Wrong Parser Type \n");
         }
         else
         {
-            nmea0183_get_gpgga(&mygpgga);
             print_gpgga();
         }
     }
@@ -121,13 +120,12 @@ main (void)
 
     {
         printf("GPRMC data is updated.\n");
-        if (nmea0183_check_gprmc(&mygprmc) != NMEA_OK)
+        if (nmea0183_get_gprmc(&mygprmc) != NMEA_OK)
         {
             printf("Wrong Parser Type \n");
         }
         else
         {
-            nmea0183_get_gprmc(&mygprmc);
             print_gprmc();
         }
     }
